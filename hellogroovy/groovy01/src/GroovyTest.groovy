@@ -4,9 +4,7 @@
 class GroovyTest {
     def name
     def age
-    String toString(){
-        "$name,$age"
-    }
+
     def test =
             println "hello groovy"
 
@@ -21,6 +19,12 @@ class GroovyTest {
         gt.say('groovy')
         gt.setName 'kk'
         println gt.getName()
+
+        def gtObj = new GroovyTest();
+        def gtObj2 = new GroovyTest(['name':'good','age':22])
+        println gtObj2
+
+//String displayName = name != null?name:"Ubnknown"
     }
 
     def say = {word -> println "hi,$word!"}
