@@ -94,3 +94,32 @@ factorial2 = list.inject(1) {previous, element -> previous * element}
 println "factorial2(5):${factorial2}"
 
 //闭包的其他特性
+def filter(list, predicate){
+    return list.findAll(predicate)
+}
+def isOdd = {x -> return !isEven(x)}
+
+def table = [11,12,13,14]
+def evens = filter(table,isEven)
+println "evens ; ${evens}"
+def odds = filter(table, isOdd)
+println "odds:${odds}"
+
+//闭包作为另一个闭包的参数
+def takeWhile = {predicate, list1 ->
+    def result = []
+    for(element in list1) {
+        if(predicate(element)) {
+            result << element
+        }else {
+            return result
+        }
+    }
+    return result
+}
+def table1 = [12,14,15,18]
+def table2 = [11,13,15,16,18]
+evens = takeWhile(isEven,table1)
+println "takeWhile evens : ${evens}"
+odds = takeWhile(isOdd,table2)
+println "takeWhile odds : ${odds}"
