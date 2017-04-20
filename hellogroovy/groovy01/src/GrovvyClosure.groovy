@@ -123,3 +123,48 @@ evens = takeWhile(isEven,table1)
 println "takeWhile evens : ${evens}"
 odds = takeWhile(isOdd,table2)
 println "takeWhile odds : ${odds}"
+
+//闭包作为返回值
+def multiply(x){
+    return {y ->
+        return x * y
+    }
+}
+def twice = multiply(2)
+println "twice(4):${twice(4)}"
+def multiplication = {x ->
+    return {y ->
+        return x * y
+    }
+}
+def quadruple = multiplication(4)
+println "quadruple(3):${quadruple(3)}"
+
+//选择性排序
+def selectionSort = {list2 ->
+    def swap = {sList,p,q ->
+        def temp = sList[p]
+        sList[p] = sList[q]
+        sList[q] = temp
+    }
+    def mininumPositaion = {pList, from ->
+        def mPos = from
+        def nextFrom = 1 + from
+        for(j in nextFrom..<pList.size()) {
+            if(pList[j] < pList[mPos]) {
+                mPos = j
+            }
+        }
+            return mPos
+    }
+    def size = list2.size() - 1
+    for (k in 0..size) {
+        def minPos = mininumPositaion(list2, k)
+        swap(list2, minPos, k)
+    }
+    return list2
+
+}
+table = [13,14,12,11,14]
+def sorted = selectionSort(table)
+println "sorted:${sorted}"

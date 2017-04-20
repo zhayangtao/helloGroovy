@@ -1,0 +1,20 @@
+<library>
+  <book>
+    <title>Groovy</title>
+    <author>Ken</author>
+    <publisher>Else</publisher>
+    <isbn number='11111' />
+  </book>
+  <book>
+    <title>Object Design</title>
+    <author>john</author>
+    <publisher>Else</publisher>
+    <isbn number='222222' />
+  </book>
+  <book>
+    <title>C Programming</title>
+    <author>Ken</author>
+    <publisher>Pren</publisher>
+    <isbn number='33333' />
+  </book>
+</library>

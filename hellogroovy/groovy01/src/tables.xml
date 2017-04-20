@@ -1,0 +1,17 @@
+<tables>
+  <table name='Book'>
+    <field name='title' type='text' />
+    <field name='isbn' type='text' />
+    <field name='price' type='integer' />
+    <field name='author' type='id' />
+    <field name='publisher' type='id' />
+  </table>
+  <table name='author'>
+    <field name='surname' type='text' />
+    <field name='forename' type='text' />
+  </table>
+  <table name='Publisher'>
+    <field name='name' type='text' />
+    <field name='url' type='text' />
+  </table>
+</tables>

@@ -1,0 +1,15 @@
+<staff>
+  <lecturer name='Ken Bar'>
+    <student name='David' grade='55' />
+    <student name='Angus' grade='75' />
+  </lecturer>
+  <lecturer name='John Sava'>
+    <student name='Jack' grade='60' />
+    <student name='Todd' grade='44' />
+    <student name='Mark' grade='62' />
+  </lecturer>
+  <lecturer name='Jessie Ken'>
+    <student name='Mike' grade='50' />
+    <student name='Ruth' grade='70' />
+  </lecturer>
+</staff>
